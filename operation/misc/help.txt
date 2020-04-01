@@ -1,0 +1,11 @@
+
+- operation hello : to test if your installation works. Display "Roger that.".
+
+- operation pybash : access a bash environment with python installed.
+
+- operation ipython : launch an ipython shell.
+
+- operation jupyter-notebook : launch a jupyter notebook.
+
+- operation csv-split <file> <chunk_size>: allow to split a csv file into many parts.
+
