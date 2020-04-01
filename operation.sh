@@ -8,14 +8,14 @@ if [ "$1" = "--help" ]; then
 fi
 
 # BUILD
-if [ "$1" = "build" ]; then
+if [ "$1" = "briefing" ]; then
    docker build -f ${OPERATION_FOLDER}/operation/src/test/Dockerfile -t operation_test . && \
    docker build -f ${OPERATION_FOLDER}/operation/src/csv/Dockerfile -t operation_csv . && \
    docker build -f ${OPERATION_FOLDER}/operation/src/python/Dockerfile -t operation_python . && \
    docker build -f ${OPERATION_FOLDER}/operation/src/rstudio/Dockerfile -t operation_rstudio .
 fi
 
-# HELLO WORLD
+# TEST
 if [ "$1" = "hello" ]; then
    docker container run --rm operation_test
 fi
