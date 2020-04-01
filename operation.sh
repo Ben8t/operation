@@ -16,7 +16,7 @@ if [ "$1" = "briefing" ]; then
 fi
 
 # TEST
-if [ "$1" = "hello" ]; then
+if [ "$1" = "test" ]; then
    docker container run --rm operation_test
 fi
 

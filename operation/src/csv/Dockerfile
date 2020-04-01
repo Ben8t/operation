@@ -2,6 +2,6 @@ FROM ubuntu:16.04
 
 WORKDIR /app
 
-COPY ./operation/csv /app
+COPY ./operation/src/csv /app
 
 ENTRYPOINT ["/bin/bash"]

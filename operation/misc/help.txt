@@ -1,5 +1,5 @@
 
-- operation hello : to test if your installation works. Display "Roger that.".
+- operation test : to test if your installation works. Display "Roger that.".
 
 - operation pybash : access a bash environment with python installed.
 
