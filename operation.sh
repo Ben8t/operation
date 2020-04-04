@@ -9,10 +9,15 @@ fi
 
 # BUILD
 if [ "$1" = "briefing" ]; then
-   docker build -f ${OPERATION_FOLDER}/operation/src/test/Dockerfile -t operation_test . && \
-   docker build -f ${OPERATION_FOLDER}/operation/src/csv/Dockerfile -t operation_csv . && \
-   docker build -f ${OPERATION_FOLDER}/operation/src/python/Dockerfile -t operation_python . && \
-   docker build -f ${OPERATION_FOLDER}/operation/src/rstudio/Dockerfile -t operation_rstudio .
+   if [ "$2" = "search" ]; then
+      docker build -f ${OPERATION_FOLDER}/operation/src/search/Dockerfile -t operation_search .
+   else
+      docker build -f ${OPERATION_FOLDER}/operation/src/test/Dockerfile -t operation_test . && \
+      docker build -f ${OPERATION_FOLDER}/operation/src/csv/Dockerfile -t operation_csv . && \
+      docker build -f ${OPERATION_FOLDER}/operation/src/python/Dockerfile -t operation_python . && \
+      docker build -f ${OPERATION_FOLDER}/operation/src/rstudio/Dockerfile -t operation_rstudio . && \
+      docker build -f ${OPERATION_FOLDER}/operation/src/search/Dockerfile -t operation_search .
+   fi
 fi
 
 # TEST
@@ -21,7 +26,7 @@ if [ "$1" = "test" ]; then
 fi
 
 # CSV
-if [[ "$1" -eq "csv-split" && ! -z "$2" && ! -z "$3" ]]; then
+if [[ "$1" = "csv-split" && ! -z "$2" && ! -z "$3" ]]; then
    docker container run --rm -v $(pwd):/tmp operation_csv split.sh /tmp/$2 $3
 fi
 
@@ -41,5 +46,10 @@ fi
 # RSTUDIO
 if [ "$1" = "rstudio" ]; then
    echo "Open a web browser to 0.0.0.0:8787 - user = user and password = root."
-   docker run --rm -v $(pwd):/home/rstudio/kitematic -p 8787:8787 -e USER=user -e PASSWORD=root operation_rstudio
+   docker container run --rm -v $(pwd):/home/rstudio/kitematic -p 8787:8787 -e USER=user -e PASSWORD=root operation_rstudio
+fi
+
+# search
+if [ "$1" = "search" ]; then
+   docker container run --rm -it operation_search "${@:2}"
 fi
