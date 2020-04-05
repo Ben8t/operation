@@ -49,7 +49,7 @@ if [ "$1" = "rstudio" ]; then
    docker container run --rm -v $(pwd):/home/rstudio/kitematic -p 8787:8787 -e USER=user -e PASSWORD=root operation_rstudio
 fi
 
-# search
+# SEARCH
 if [ "$1" = "search" ]; then
    docker container run --rm -it operation_search "${@:2}"
 fi

@@ -5,7 +5,8 @@
 
 - operation ipython : launch an ipython shell.
 
-- operation jupyter-notebook : launch a jupyter notebook.
+- operation jupyter-notebook : launch a jupyter notebook. You can install python librairies with !pip install <library>.
 
 - operation csv-split <file> <chunk_size>: allow to split a csv file into many parts.
 
+- operation search <query>: query to DuckDuckGo engine.
