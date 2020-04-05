@@ -1,4 +1,4 @@
-![logo](operation/misc/operation.png)
+![logo](operation/misc/logo.png)
 
 # Operation
 
