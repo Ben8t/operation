@@ -53,3 +53,7 @@ fi
 if [ "$1" = "search" ]; then
    docker container run --rm -it operation_search "${@:2}"
 fi
+
+if [ "$1" = "shutdown" ]; then
+   docker rm -f $(docker ps -a -q)
+fi
