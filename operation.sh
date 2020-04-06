@@ -9,15 +9,12 @@ fi
 
 # BUILD
 if [ "$1" = "briefing" ]; then
-   if [ "$2" = "search" ]; then
-      docker build -f ${OPERATION_FOLDER}/operation/src/search/Dockerfile -t operation_search .
-   else
-      docker build -f ${OPERATION_FOLDER}/operation/src/test/Dockerfile -t operation_test . && \
-      docker build -f ${OPERATION_FOLDER}/operation/src/csv/Dockerfile -t operation_csv . && \
-      docker build -f ${OPERATION_FOLDER}/operation/src/python/Dockerfile -t operation_python . && \
-      docker build -f ${OPERATION_FOLDER}/operation/src/rstudio/Dockerfile -t operation_rstudio . && \
-      docker build -f ${OPERATION_FOLDER}/operation/src/search/Dockerfile -t operation_search .
-   fi
+   docker build -f ${OPERATION_FOLDER}/operation/src/test/Dockerfile -t operation_test . && \
+   docker build -f ${OPERATION_FOLDER}/operation/src/csv/Dockerfile -t operation_csv . && \
+   docker build -f ${OPERATION_FOLDER}/operation/src/python/Dockerfile -t operation_python . && \
+   docker build -f ${OPERATION_FOLDER}/operation/src/rstudio/Dockerfile -t operation_rstudio . && \
+   docker build -f ${OPERATION_FOLDER}/operation/src/search/Dockerfile -t operation_search . && \
+   docker build -f ${OPERATION_FOLDER}/operation/src/date/Dockerfile -t operation_date .
 fi
 
 # TEST
@@ -54,6 +51,11 @@ if [ "$1" = "search" ]; then
    docker container run --rm -it operation_search "${@:2}"
 fi
 
+# SHUTDOWN
 if [ "$1" = "shutdown" ]; then
    docker rm -f $(docker ps -a -q)
+fi
+
+if [ "$1" = "date" ]; then
+   docker container run --rm -it operation_date "${@:2}"
 fi

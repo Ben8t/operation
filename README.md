@@ -37,24 +37,31 @@ Where `<installation_path>` is the full path where you cloned this repository.
 
 ### Python
 
-**bash** : `operation pybash`
+`operation pybash`
 
-**ipython** : `operation ipython`
+`operation ipython`
 
-**jupyter-notebook** : `operation jupyter-notebook`
+`operation jupyter-notebook`
 
 ## Rstudio
 
-**rstudio** : `operation rstudio`
+`operation rstudio`
 
 ### CSV
 
-**split** : `operation csv-split <file> <chunk_size>`
+`operation csv-split <file> <chunk_size>`
 
 ### SEARCH
 
-**search** : `operation search <query>`
+`operation search <query>`
 
+### SHUTDOWN
+
+`operation shutdown`
+
+### DATE
+
+`operation date`
 ---
 
 This project is licensed under the MIT license

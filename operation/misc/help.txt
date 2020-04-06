@@ -10,3 +10,7 @@
 - operation csv-split <file> <chunk_size>: allow to split a csv file into many parts.
 
 - operation search <query>: query to DuckDuckGo engine.
+
+- operation shutdown : clear all operations. WARNING : this will stop/delete all running Docker container too.
+
+- operation date : a tiny command line utility to calculate date and time difference.
