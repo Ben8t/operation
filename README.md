@@ -1,4 +1,6 @@
-![logo](operation/misc/logo.png)
+<center>
+<img src="operation/misc/operation.png" width="400" />
+</center>
 
 # Operation
 
@@ -8,9 +10,9 @@ This project was born from several observations :
 
 * It is sometimes difficult and boring to install (and reinstall) tools on your computers.
 
-* To get utils applications we don't really know and use occasionally (like split a csv file, reverse an image, etc...).
+* It is boring to gather utils applications we don't really know and use occasionally (like split a csv file, reverse an image, etc...).
 
-* To be able to custom these tools without worring about installation dependencies on your system.
+* It is hard to custom and install other tools without worring about installation dependencies on your system.
 
 `operation` bring simple pattern as `operation <operation_name>` to run any operation listed below. 
 
@@ -35,7 +37,7 @@ Where `<installation_path>` is the full path where you cloned this repository.
 
 ## :round_pushpin: Operations list
 
-### Python
+### python
 
 `operation pybash`
 
@@ -43,29 +45,35 @@ Where `<installation_path>` is the full path where you cloned this repository.
 
 `operation jupyter-notebook`
 
-## Rstudio
+## rstudio
 
 `operation rstudio`
 
-### CSV
+### csv
 
 `operation csv-split <file> <chunk_size>`
 
-### SEARCH
+### search
 
 `operation search <query>`
 
-### SHUTDOWN
+### shutdown
 
 `operation shutdown`
 
-### DATE
+### date
 
 `operation date`
 
-### IMAGE
+### image
 
 `operation image`
+
+## Artwork
+
+<center>
+<img src="operation/misc/artwork.png" width="800" />
+</center>
 
 ---
 
