@@ -62,6 +62,11 @@ Where `<installation_path>` is the full path where you cloned this repository.
 ### DATE
 
 `operation date`
+
+### IMAGE
+
+`operation image`
+
 ---
 
 This project is licensed under the MIT license

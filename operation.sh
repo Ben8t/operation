@@ -14,7 +14,8 @@ if [ "$1" = "briefing" ]; then
    docker build -f ${OPERATION_FOLDER}/operation/src/python/Dockerfile -t operation_python . && \
    docker build -f ${OPERATION_FOLDER}/operation/src/rstudio/Dockerfile -t operation_rstudio . && \
    docker build -f ${OPERATION_FOLDER}/operation/src/search/Dockerfile -t operation_search . && \
-   docker build -f ${OPERATION_FOLDER}/operation/src/date/Dockerfile -t operation_date .
+   docker build -f ${OPERATION_FOLDER}/operation/src/date/Dockerfile -t operation_date . && \
+   docker build -f ${OPERATION_FOLDER}/operation/src/image/Dockerfile -t operation_image .
 fi
 
 # TEST
@@ -58,4 +59,8 @@ fi
 
 if [ "$1" = "date" ]; then
    docker container run --rm -it operation_date "${@:2}"
+fi
+
+if [ "$1" = "image" ]; then
+   docker container run --rm -it -v $(pwd):/app operation_image "${@:2}"
 fi

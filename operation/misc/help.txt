@@ -14,3 +14,5 @@
 - operation shutdown : clear all operations. WARNING : this will stop/delete all running Docker container too.
 
 - operation date : a tiny command line utility to calculate date and time difference.
+
+- operation image : a command line image resizer and rotator for JPEG and PNG images.
