@@ -1,6 +1,6 @@
-<center>
-<img align="center" src="operation/misc/operation.png" width="400" />
-</center>
+<div align="center">
+<img src="operation/misc/operation.png" width="400" />
+</div>
 
 # Operation
 
@@ -76,9 +76,9 @@ alias operation="${OPERATION_FOLDER}/operation.sh"
 
 ## Artwork
 
-<center>
+<div align="center">
 <img src="operation/misc/artwork.png" width="800" />
-</center>
+</div>
 
 ---
 
