@@ -1,7 +1,7 @@
-FROM ubuntu:16.04
+FROM alpine:latest
 
 WORKDIR /app
 
 COPY ./operation/src/test/test.sh /app/test.sh
 
-CMD ["/bin/bash", "test.sh"]
+CMD ["/bin/sh", "test.sh"]
