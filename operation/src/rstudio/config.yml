@@ -1,5 +1,5 @@
 name: rstudio
 secret_name: rstudio
-type: rstudio
+type: alpha
 command: docker container run --rm -v $(pwd):/home/rstudio/kitematic -p 8787:8787 -e USER=user -e PASSWORD=root operation_rstudio
 description: Unknown.

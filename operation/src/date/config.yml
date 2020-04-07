@@ -1,5 +1,5 @@
 name: date
 secret_name: date
-type: date
+type: alpha
 command: docker container run --rm -it operation_date "${@:2}"
 description: Unknown.

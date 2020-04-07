@@ -1,5 +1,5 @@
 name: test
 secret_name: test
-type: test
+type: alpha
 command: docker container run --rm operation_test
 description: Display Roger that.

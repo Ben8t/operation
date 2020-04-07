@@ -1,5 +1,5 @@
 name: shutdown
 secret_name: shutdown
-type: shutdown
+type: alpha
 command: docker rm -f $(docker ps -a -q)
 description: Kill all running operations.
