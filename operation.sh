@@ -30,15 +30,15 @@ fi
 
 # PYTHON
 if [ "$1" = "pybash" ]; then
-   docker container run --rm -it -v $(pwd):/tmp operation_python
+   docker container run --rm -it -v $(pwd):/tmp -w /tmp operation_python
 fi
 
 if [ "$1" = "ipython" ]; then
-   docker container run --rm -it -v $(pwd):/tmp --entrypoint ipython operation_python
+   docker container run --rm -it -v $(pwd):/tmp -w /tmp --entrypoint ipython operation_python
 fi
 
 if [ "$1" = "jupyter-notebook" ]; then
-   docker container run --rm -p 8888:8888 -v $(pwd):/tmp --entrypoint jupyter-notebook operation_python --notebook-dir=/tmp --ip='*' --port=8888 --no-browser --allow-root
+   docker container run --rm -p 8888:8888 -v $(pwd):/tmp -w /tmp --entrypoint jupyter-notebook operation_python --notebook-dir=/tmp --ip='*' --port=8888 --no-browser --allow-root
 fi
 
 # RSTUDIO
