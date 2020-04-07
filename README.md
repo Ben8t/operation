@@ -1,24 +1,27 @@
 <center>
-<img src="operation/misc/operation.png" width="400" />
+<img align="center" src="operation/misc/operation.png" width="400" />
 </center>
 
 # Operation
 
-`operation` is a tool that gather many Docker images into one place to bring common and simple environments. With a focus on data science projects you will find Python or R workspaces such as Jupyter-Notebook or Rstudio.
+`operation` is a tool that gather many Docker images into one place to bring common and simple environments. It is pretty similar to [docker-compose](https://github.com/docker/compose) features but with defined Docker images, focusing on data science applications.
 
 This project was born from several observations :
 
-* It is sometimes difficult and boring to install (and reinstall) tools on your computers.
+* It is sometimes difficult to install (and reinstall) tools on your computers.
 
 * It is boring to gather utils applications we don't really know and use occasionally (like split a csv file, reverse an image, etc...).
 
 * It is hard to custom and install other tools without worring about installation dependencies on your system.
 
-`operation` bring simple pattern as `operation <operation_name>` to run any operation listed below. 
+`operation` bring simple pattern as `operation <operation_name>` to run any operation listed below. The name operation come from military operations which are defined, operate and then classified : like any Docker container.
+It is recommanded to know a bit of this technology to better understand and customize your own operations.
 
 ## Getting started
 
-While it is build with *bash* the only dependency you will need is [Docker](https://docs.docker.com/install/). Then you can clone this repository and add shortcuts in your terminal :
+While it is build with *bash* the only dependency you will need is [Docker](https://docs.docker.com/install/). 
+
+Then you can clone this repository and add shortcuts in your terminal :
 
 1. `git clone https://gitlab.com/ben8t/operation.git`
 
@@ -29,7 +32,9 @@ export OPERATION_FOLDER=<installation_path>
 alias operation="${OPERATION_FOLDER}/operation.sh"
 ```
 
-Where `<installation_path>` is the full path where you cloned this repository.
+> Tips : you can change the alias by "ops" for your lazy fingers...
+
+`<installation_path>` is the full path where you cloned this repository.
 
 3. Run `operation briefing`. It may take a little time while it is building all Docker images. (improve coming soon...).
 
@@ -76,5 +81,7 @@ Where `<installation_path>` is the full path where you cloned this repository.
 </center>
 
 ---
+
+Copyright © 2020 Benoit Pimpaud
 
 This project is licensed under the MIT license
