@@ -50,7 +50,7 @@ alias operation="${OPERATION_FOLDER}/operation.sh"
 
 `operation jupyter-notebook`
 
-## rstudio
+### rstudio
 
 `operation rstudio`
 
@@ -75,6 +75,8 @@ alias operation="${OPERATION_FOLDER}/operation.sh"
 `operation image`
 
 ## Artwork
+
+Learning to use Blender during the development of this project so...
 
 <div align="center">
 <img src="operation/misc/artwork.png" width="800" />
