@@ -1,0 +1,5 @@
+name: csv
+secret_name: cdv
+type: csv
+command: docker container run --rm -v $(pwd):/tmp operation_csv split.sh /tmp/$2 $3
+description: Unknown.

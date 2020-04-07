@@ -22,7 +22,7 @@ While it is build with *bash* the only dependency you will need is [Docker](http
 
 1. `git clone https://gitlab.com/ben8t/operation.git`
 
-2. [OPTIONAL] Add the following lines to your `.bashrc` script.
+2. Add the following lines to your `.bashrc` script.
 
 ```bash
 export OPERATION_FOLDER=<installation_path>

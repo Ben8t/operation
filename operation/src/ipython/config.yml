@@ -1,0 +1,5 @@
+name: ipython
+secret_name: ipython
+type: python
+command: docker container run --rm -it -v $(pwd):/tmp -w /tmp operation_ipython
+description: Unknown.

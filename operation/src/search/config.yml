@@ -1,0 +1,5 @@
+name: search
+secret_name: search
+type: search
+command: docker container run --rm -it operation_search "${@:2}"
+description: Unknown.

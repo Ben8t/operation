@@ -1,0 +1,5 @@
+name: pybash
+secret_name: pybash
+type: python
+command: docker container run --rm -it -v $(pwd):/tmp -w /tmp operation_pybash
+description: Unknown.
