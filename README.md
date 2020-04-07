@@ -4,7 +4,7 @@
 
 # Operation
 
-`operation` is a tool that gather many Docker images into one place to bring common and simple environments. It is pretty similar to [docker-compose](https://github.com/docker/compose) features but with defined Docker images, focusing on data science applications.
+`operation` is a tool that gather many Docker routines into one place to bring common and simple environments or applications. It is pretty similar to [docker-compose](https://github.com/docker/compose) features but with defined Docker images, and a focus on data science tools.
 
 This project was born from several observations :
 
@@ -16,6 +16,8 @@ This project was born from several observations :
 
 `operation` bring simple pattern as `operation <operation_name>` to run any operation listed below. The name operation come from military operations which are defined, operate and then classified : like any Docker container.
 It is recommanded to know a bit of this technology to better understand and customize your own operations.
+
+> Goal here is not to replace a full workspace but rather to give easy applications without any setup required, excepted Docker.
 
 ## Getting started
 
@@ -73,6 +75,11 @@ alias operation="${OPERATION_FOLDER}/operation.sh"
 ### image
 
 `operation image`
+
+
+## Advanced
+
+It's pretty easy to custom any Dockerfile in this repository and add any operations needed. The folder `operation/src` contains all operations which are defined by a `Dockerfile` and a `config.yml`.
 
 ## Artwork
 
