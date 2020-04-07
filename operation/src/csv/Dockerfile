@@ -2,6 +2,6 @@ FROM ubuntu:16.04
 
 WORKDIR /app
 
-COPY ./operation/src/csv /app
+COPY ./split.sh /app/split.sh
 
 ENTRYPOINT ["/bin/bash"]

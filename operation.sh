@@ -21,7 +21,7 @@ do
     if [ "$1" = "briefing" ]; then
         if [[ -z "$2" && -f ${OPERATION_FOLDER}/operation/src/$operation_directory/Dockerfile ]]; then
             echo "Building operation $opconfig_name"
-            docker build -f ${OPERATION_FOLDER}/operation/src/$operation_directory/Dockerfile -t operation_$opconfig_name .
+            docker build -f ${OPERATION_FOLDER}/operation/src/$operation_directory/Dockerfile -t operation_$opconfig_name ${OPERATION_FOLDER}/operation/src/$operation_directory/.
         fi
     # RUN
     elif [ "$1" = "$opconfig_name" ]; then
