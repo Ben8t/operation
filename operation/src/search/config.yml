@@ -1,5 +1,5 @@
 name: search
-secret_name: mirador
+secret: mirador
 type: alpha
 command: docker container run --rm -it operation_search "${@:2}"
 description: Unknown.

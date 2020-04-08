@@ -1,5 +1,5 @@
 name: date
-secret_name: chronos
+secret: chronos
 type: alpha
 command: docker container run --rm -it operation_date "${@:2}"
 description: Unknown.

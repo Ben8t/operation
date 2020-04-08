@@ -1,5 +1,5 @@
 name: jupyter
-secret_name: neptune
+secret: neptune
 type: alpha
 command: docker container run --rm -p 8888:8888 -v $(pwd):/tmp -w /tmp operation_jupyter --notebook-dir=/tmp --ip='*' --port=8888 --no-browser --allow-root
 description: Unknown.
