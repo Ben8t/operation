@@ -24,7 +24,7 @@ do
             docker build -f ${OPERATION_FOLDER}/operation/src/$operation_directory/Dockerfile -t operation_$opconfig_name ${OPERATION_FOLDER}/operation/src/$operation_directory/.
         fi
     # RUN
-    elif [[ "$1" = "$opconfig_name" || $"1" = "$opconfig_secret" ]]; then
+    elif [[ "$1" = "$opconfig_name" || "$1" = "$opconfig_secret" ]]; then
         $opconfig_command
     fi
 done
