@@ -4,20 +4,24 @@
 
 # Operation
 
-`operation` is a tool that gather many Docker routines into one place to bring common and simple environments or applications. It is pretty similar to [docker-compose](https://github.com/docker/compose) features but with defined Docker images, and a focus on data science tools.
+`operation` gathers many Docker routines into one place to bring common and simple environments or applications.
 
-This project was born from several observations :
+From a data science view,  this project was born from several observations :
 
 * It is sometimes difficult to install (and reinstall) tools on your computers.
 
-* It is boring to gather utils applications we don't really know and use occasionally (like split a csv file, reverse an image, etc...).
+* It is boring to gather utils we don't really know and we use only occasionally (like split a csv file, reverse an image, etc...).
 
-* It is hard to custom and install other tools without worring about installation dependencies on your system.
+* It is hard to custom and install other tools without worrying about installation dependencies on your system.
 
-`operation` bring simple pattern as `operation <operation_name>` to run any operation listed below. The name operation come from military operations which are defined, operate and then classified : like any Docker container.
-It is recommanded to know a bit of this technology to better understand and customize your own operations.
+While Docker answers these problems, it still tedious to find, build, historize docker images. Keeping reproducibility in mind.
 
-> Goal here is not to replace a full workspace but rather to give easy applications without any setup required, excepted Docker.
+`operation` brings simple pattern as `operation <operation_name>` to run any operation listed below. 
+
+The name "operation" comes from military operations that are defined, operated and then classified : like any Docker container.
+It is recommended to know a bit of this technology to better understand and customize your own operations.
+
+> It is pretty like [docker-compose](https://github.com/docker/compose) features but with defined Docker images, and a focus on data science tools. Goal here is not to replace a full workspace but rather to round up common applications with very light setup required : it is bash + docker only.
 
 ## Getting started
 
@@ -27,18 +31,20 @@ Then you can clone this repository and add shortcuts in your terminal :
 
 1. `git clone https://gitlab.com/ben8t/operation.git`
 
-2. Add the following lines to your `.bashrc` script.
+2. Add the following lines to your shell session script (`.bashrc` or `.zshrc` or `config.fish`, etc...).
 
 ```bash
 export OPERATION_FOLDER=<installation_path>
 alias operation="${OPERATION_FOLDER}/operation.sh"
 ```
 
-> Tips : you can change the alias by "ops" for your lazy fingers...
-
 `<installation_path>` is the full path where you cloned this repository.
 
-3. Run `operation briefing`. It may take a little time while it is building all Docker images. (improve coming soon...).
+> Tips : you can change the alias by "ops" for your lazy fingers...
+
+3. Run `operation briefing`. It may take a little time while it is building all Docker images.
+
+> TODO : use field type in operation configuration files (`config.yml`) to separate builds.
 
 4. Run `operation test` to test the installation. This routine should print "Roger that." in your console.
 
@@ -46,15 +52,15 @@ alias operation="${OPERATION_FOLDER}/operation.sh"
 
 ### python
 
-`operation pybash`
+`operation pybash` or `operation underground`
 
-`operation ipython`
+`operation ipython` or `operation rattlesnake`
 
-`operation jupyter-notebook`
+`operation jupyter` or `operation neptune`
 
 ### rstudio
 
-`operation rstudio`
+`operation rstudio` or `operation paramount`
 
 ### csv
 
@@ -62,7 +68,7 @@ alias operation="${OPERATION_FOLDER}/operation.sh"
 
 ### search
 
-`operation search <query>`
+`operation search <query>` or `operation mirador`
 
 ### shutdown
 
@@ -70,11 +76,11 @@ alias operation="${OPERATION_FOLDER}/operation.sh"
 
 ### date
 
-`operation date`
+`operation date` or `operation chronos`
 
 ### image
 
-`operation image`
+`operation image` or `operation nightbird`
 
 
 ## Advanced
