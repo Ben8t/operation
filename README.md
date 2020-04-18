@@ -82,6 +82,10 @@ alias operation="${OPERATION_FOLDER}/operation.sh"
 
 `operation image` or `operation nightbird`
 
+### mlflow
+
+`operation mlflow` or `operation blue_flower`
+
 
 ## Advanced
 

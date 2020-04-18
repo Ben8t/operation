@@ -1,0 +1,5 @@
+name: mlflow
+secret: blue_flower
+type: alpha
+command: docker container run --rm -it -p 5000:5000 -v $2:/data -w /data operation_mlflow
+description: Unknown.
