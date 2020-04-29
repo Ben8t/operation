@@ -16,3 +16,7 @@
 - operation date : a tiny command line utility to calculate date and time difference.
 
 - operation image : a command line image resizer and rotator for JPEG and PNG images.
+
+- operation mlflow : launch mlFlow user interface from the current folder (must contains an mlruns folder)
+
+- operation shellcheck : check shell syntax

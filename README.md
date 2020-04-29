@@ -86,6 +86,9 @@ alias operation="${OPERATION_FOLDER}/operation.sh"
 
 `operation mlflow` or `operation blue_flower`
 
+### shellcheck
+
+`operation shellcheck` or `operation white_paper`
 
 ## Advanced
 
