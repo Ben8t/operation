@@ -52,43 +52,43 @@ alias operation="${OPERATION_FOLDER}/operation.sh"
 
 ### python
 
-`operation pybash` or `operation underground`
+`operation pybash` or `operation underground`: access a bash environment with python installed. Current workspace is mapped to `/tmp` folder in container.
 
-`operation ipython` or `operation rattlesnake`
+`operation ipython` or `operation rattlesnake`: launch an [IPython](https://ipython.org/) shell.
 
-`operation jupyter` or `operation neptune`
+`operation jupyter` or `operation neptune`: launch a [Jupyter Notebook](https://jupyter.org/).
 
 ### rstudio
 
-`operation rstudio` or `operation paramount`
+`operation rstudio` or `operation paramount`: launch a [RStudio](https://rstudio.com/) session.
 
 ### csv
 
-`operation csv-split <file> <chunk_size>`
+`operation csv-split <file> <chunk_size>`: allow to split a csv file into many parts.
 
 ### search
 
-`operation search <query>` or `operation mirador`
+`operation search <query>` or `operation mirador`: query to DuckDuckGo engine.
 
 ### shutdown
 
-`operation shutdown`
+`operation shutdown`: clear all operations. WARNING : this will stop/delete all running Docker container too.
 
 ### date
 
-`operation date` or `operation chronos`
+`operation date` or `operation chronos`: a tiny command line utility to calculate date and time difference. Based on [pdd](https://github.com/jarun/pdd).
 
 ### image
 
-`operation image` or `operation nightbird`
+`operation image` or `operation nightbird`: a command line image resizer and rotator for JPEG and PNG images. Based on [imgp](https://github.com/jarun/imgp).
 
 ### mlflow
 
-`operation mlflow` or `operation blue_flower`
+`operation mlflow` or `operation blue_flower`: launch [mlFlow](https://mlflow.org/) user interface from the current folder (must contains an mlruns folder).
 
 ### shellcheck
 
-`operation shellcheck` or `operation white_paper`
+`operation shellcheck` or `operation white_paper`: check shell script syntax. Based on (shellcheck)(https://github.com/koalaman/shellcheck).
 
 ## Advanced
 

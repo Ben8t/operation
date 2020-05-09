@@ -7,6 +7,8 @@
 
 - operation jupyter-notebook : launch a jupyter notebook. You can install python librairies with !pip install <library>.
 
+- operation rstudio : launch a RStudio session.
+
 - operation csv-split <file> <chunk_size>: allow to split a csv file into many parts.
 
 - operation search <query>: query to DuckDuckGo engine.
@@ -19,4 +21,4 @@
 
 - operation mlflow : launch mlFlow user interface from the current folder (must contains an mlruns folder)
 
-- operation shellcheck : check shell syntax
+- operation shellcheck : check shell syntax.
