@@ -25,6 +25,7 @@ do
         fi
     # RUN
     elif [[ "$1" = "$opconfig_name" || "$1" = "$opconfig_secret" ]]; then
+        echo $opconfig_description
         $opconfig_command
     fi
 done

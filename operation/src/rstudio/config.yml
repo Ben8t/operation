@@ -1,5 +1,5 @@
 name: rstudio
 secret: paramount
 type: alpha
-command: docker container run --rm -v $(pwd):/home/rstudio/kitematic -p 8787:8787 -e USER=user -e PASSWORD=root operation_rstudio
-description: Unknown.
+command: docker container run --rm -d -v $(pwd):/home/user/kitematic -p 8787:8787 -e USER=user -e PASSWORD=root operation_rstudio
+description: RStudio in your web browser. Open 0.0.0.0:8787, user=user, password=root.
