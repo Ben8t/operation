@@ -1,0 +1,6 @@
+ipython 
+numpy 
+matplotlib
+pandas 
+scikit-learn 
+SQLAlchemy
