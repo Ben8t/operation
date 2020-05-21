@@ -19,6 +19,10 @@ do
     eval $(parse_yaml ${OPERATION_FOLDER}/operation/src/$operation_directory/config.yml "opconfig_")
     # BUILD
     if [ "$1" = "briefing" ]; then
+        if [[ "$2" = $opconfig_name ]]; then
+            echo "Building operation $opconfig_name"
+            docker build -f ${OPERATION_FOLDER}/operation/src/$operation_directory/Dockerfile -t operation_$opconfig_name ${OPERATION_FOLDER}/operation/src/$operation_directory/.
+        fi
         if [[ -z "$2" && -f ${OPERATION_FOLDER}/operation/src/$operation_directory/Dockerfile ]]; then
             echo "Building operation $opconfig_name"
             docker build -f ${OPERATION_FOLDER}/operation/src/$operation_directory/Dockerfile -t operation_$opconfig_name ${OPERATION_FOLDER}/operation/src/$operation_directory/.
