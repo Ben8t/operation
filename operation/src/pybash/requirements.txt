@@ -1,0 +1,15 @@
+numpy
+pandas
+scipy
+matplotlib
+seaborn
+altair
+scikit-learn
+scikit-plot
+xgboost
+SQLAlchemy
+shap
+alive-progress
+tqdm
+ipdb
+logzero
