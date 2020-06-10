@@ -12,4 +12,5 @@ shap
 alive-progress
 tqdm
 ipdb
+requests
 logzero

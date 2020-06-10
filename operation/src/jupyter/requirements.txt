@@ -12,3 +12,4 @@ SQLAlchemy
 shap
 alive-progress
 tqdm
+requests
