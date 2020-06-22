@@ -8,6 +8,7 @@ RUN R -e "install.packages('gghighlight',dependencies=TRUE, repos='http://cran.r
 RUN R -e "install.packages('pander',dependencies=TRUE, repos='http://cran.rstudio.com/')"
 RUN R -e "install.packages('showtext',dependencies=TRUE, repos='http://cran.rstudio.com/')"
 RUN R -e "devtools::install_github('FCrSTATS/SBpitch')"
+RUN R -e "install.packages('ggsoccer', dependencies=TRUE, repos=('https://cran.rstudio.com/')"
 
 RUN cd /usr/share/fonts && git clone https://github.com/Ben8t/fonts.git
 RUN fc-cache -f -v
