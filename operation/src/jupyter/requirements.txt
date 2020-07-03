@@ -13,3 +13,5 @@ shap
 alive-progress
 tqdm
 requests
+pandas-profiling
+
