@@ -1,6 +1,10 @@
 
 - operation test : to test if your installation works. Display "Roger that.".
 
+- operation report : list all running operations.
+
+- operation shutdown : clear all operations. WARNING : this will stop/delete all running Docker container too.
+
 - operation pybash : access a bash environment with python installed.
 
 - operation ipython : launch an ipython shell.
@@ -12,8 +16,6 @@
 - operation csv-split <file> <chunk_size>: allow to split a csv file into many parts.
 
 - operation search <query>: query to DuckDuckGo engine.
-
-- operation shutdown : clear all operations. WARNING : this will stop/delete all running Docker container too.
 
 - operation date : a tiny command line utility to calculate date and time difference.
 
