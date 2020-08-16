@@ -1,5 +1,5 @@
 name: pybash
 secret: underground
 type: alpha
-command: docker container run --rm -it -v $(pwd):/tmp -w /tmp operation_pybash
+command: docker container run --rm -it -v $(pwd):/tmp -p 5042:5042 -w /tmp operation_pybash
 description: Debian shell with Python utils. Local data are mapped into the /tmp directory.
