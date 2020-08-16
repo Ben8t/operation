@@ -1,0 +1,5 @@
+name: report
+secret: report
+type: alpha
+command: docker ps -a
+description: List all running operations.
