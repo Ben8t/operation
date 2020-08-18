@@ -2,9 +2,7 @@
 <img src="operation/misc/operation.png" width="400" />
 </div>
 
-# Operation
-
-`operation` gathers many Docker routines into one place to bring common and simple environments or applications.
+**Operation** gathers many Docker routines into one place to bring common and simple environments or applications.
 
 From a data science view,  this project was born from several observations :
 
@@ -19,9 +17,9 @@ While Docker answers these problems, it still tedious to find, build, historize 
 `operation` brings simple pattern as `operation <operation_name>` to run any operation listed below. 
 
 The name "operation" comes from military operations that are defined, operated and then classified : like any Docker container.
-It is recommended to know a bit of this technology to better understand and customize your own operations.
+It is recommended to know a bit of this technology to better understand and customize your own operations. You can [read the corresponding blogpost](https://towardsdatascience.com/easy-development-environments-with-operation-6b352e72c0eb) to better understand the design and background behind this project.
 
-> It is pretty like [docker-compose](https://github.com/docker/compose) features but with defined Docker images, and a focus on data science tools. Goal here is not to replace a full workspace but rather to round up common applications with very light setup required : it is bash + docker only.
+> This project is inspired by [docker-compose](https://github.com/docker/compose) features but with defined Docker images, a focus on data science tools and more subjective setups. Goal here is not to replace a full workspace but rather to round up common applications with very light setup required : it is bash + docker only.
 
 ## Getting started
 
@@ -29,7 +27,7 @@ While it is build with *bash* the only dependency you will need is [Docker](http
 
 Then you can clone this repository and add shortcuts in your terminal :
 
-1. `git clone https://gitlab.com/ben8t/operation.git`
+1. `git clone https://github.com/Ben8t/operation.git`
 
 2. Add the following lines to your shell session script (`.bashrc` or `.zshrc` or `config.fish`, etc...).
 
@@ -42,15 +40,13 @@ alias operation="${OPERATION_FOLDER}/operation.sh"
 
 > Tips : you can change the alias by "ops" for your lazy fingers...
 
-3. Run `operation briefing`. It may take a little time while it is building all Docker images.
-
-> TODO : use field type in operation configuration files (`config.yml`) to separate builds.
+3. Run `operation briefing`. It may take a little time while it is building all Docker images. To build only one operation you can run `operation briefing <operation_name>`.
 
 4. Run `operation test` to test the installation. This routine should print "Roger that." in your console.
 
 ## :round_pushpin: Operations list
 
-### python
+**Python**
 
 `operation pybash` or `operation underground`: access a bash environment with python installed. Current workspace is mapped to `/tmp` folder in container.
 
@@ -58,37 +54,41 @@ alias operation="${OPERATION_FOLDER}/operation.sh"
 
 `operation jupyter` or `operation neptune`: launch a [Jupyter Notebook](https://jupyter.org/).
 
-### rstudio
+**RStudio**
 
 `operation rstudio` or `operation paramount`: launch a [RStudio](https://rstudio.com/) session.
 
-### csv
+**CSV processing**
 
 `operation csv-split <file> <chunk_size>`: allow to split a csv file into many parts.
 
-### search
+**DuckDuck Go search**
 
 `operation search <query>` or `operation mirador`: query to DuckDuckGo engine.
 
-### shutdown
+**Shutdown (kill)**
 
 `operation shutdown`: clear all operations. WARNING : this will stop/delete all running Docker container too.
 
-### date
+**Date processing**
 
 `operation date` or `operation chronos`: a tiny command line utility to calculate date and time difference. Based on [pdd](https://github.com/jarun/pdd).
 
-### image
+**Image processing**
 
 `operation image` or `operation nightbird`: a command line image resizer and rotator for JPEG and PNG images. Based on [imgp](https://github.com/jarun/imgp).
 
-### mlflow
+**MLflow**
 
 `operation mlflow` or `operation blue_flower`: launch [mlFlow](https://mlflow.org/) user interface from the current folder (must contains an mlruns folder).
 
-### shellcheck
+**Shellcheck**
 
 `operation shellcheck` or `operation white_paper`: check shell script syntax. Based on (shellcheck)(https://github.com/koalaman/shellcheck).
+
+**Report (list)**
+
+`operation report`: list all running operation.
 
 ## Advanced
 
