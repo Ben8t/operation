@@ -7,6 +7,8 @@ RUN R -e "install.packages('hrbrthemes',dependencies=TRUE, repos='http://cran.rs
 RUN R -e "install.packages('gghighlight',dependencies=TRUE, repos='http://cran.rstudio.com/')"
 RUN R -e "install.packages('pander',dependencies=TRUE, repos='http://cran.rstudio.com/')"
 RUN R -e "install.packages('showtext',dependencies=TRUE, repos='http://cran.rstudio.com/')"
+RUN R -e "install.packages('reactable',dependencies=TRUE, repos='http://cran.rstudio.com/')"
+RUN R -e "install.packages('ggridges',dependencies=TRUE, repos='http://cran.rstudio.com/')"
 RUN R -e "devtools::install_github('ThinkR-open/remedy')"
 
 RUN cd /usr/share/fonts && git clone https://github.com/Ben8t/fonts.git
