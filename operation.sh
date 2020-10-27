@@ -4,15 +4,29 @@
 
 cat ${OPERATION_FOLDER}/operation/misc/ui_logo.txt
 
+# Transform long options to short ones
+for arg in "$@"; do
+    shift
+    case "$arg" in
+        "--help") set -- "$@" "-h" ;;
+        *)        set -- "$@" "$arg"
+    esac
+done
+
+# Parse short options
+OPTIND=1
+while getopts "h" opt
+do
+    case "$opt" in
+        "h") cat ${OPERATION_FOLDER}/operation/misc/help.txt; exit 0;;
+        "?") exit 1 ;;
+    esac
+done
+shift $(($OPTIND - 1))
+
 if [ -z "$1" ]; then
     echo "Please pass a command."
 fi
-
-# HELP
-if [ "$1" = "--help" ]; then
-   cat ${OPERATION_FOLDER}/operation/misc/help.txt
-fi
-
 
 for operation_directory in $(ls ${OPERATION_FOLDER}/operation/src)
 do
