@@ -1,3 +1,5 @@
+# Operation
+
 <div align="center">
 <img src="operation/misc/operation.png" width="400" />
 </div>
@@ -14,7 +16,7 @@ From a data science view,  this project was born from several observations :
 
 While Docker answers these problems, it still tedious to find, build, historize docker images. Keeping reproducibility in mind.
 
-`operation` brings simple pattern as `operation <operation_name>` to run any operation listed below. 
+`operation` brings simple pattern as `operation <operation_name>` to run any operation listed below.
 
 The name "operation" comes from military operations that are defined, operated and then classified : like any Docker container.
 It is recommended to know a bit of this technology to better understand and customize your own operations. You can [read the corresponding blogpost](https://towardsdatascience.com/easy-development-environments-with-operation-6b352e72c0eb) to better understand the design and background behind this project.
@@ -23,7 +25,7 @@ It is recommended to know a bit of this technology to better understand and cust
 
 ## Getting started
 
-While it is build with *bash* the only dependency you will need is [Docker](https://docs.docker.com/install/). 
+While it is build with *bash* the only dependency you will need is [Docker](https://docs.docker.com/install/).
 
 Then you can clone this repository and add shortcuts in your terminal :
 
@@ -31,14 +33,14 @@ Then you can clone this repository and add shortcuts in your terminal :
 
 2. Add the following lines to your shell session script (`.bashrc` or `.zshrc` or `config.fish`, etc...).
 
-```bash
-export OPERATION_FOLDER=<installation_path>
-alias operation="${OPERATION_FOLDER}/operation.sh"
-```
+    ```bash
+    export OPERATION_FOLDER=<installation_path>
+    alias operation="${OPERATION_FOLDER}/operation.sh"
+    ```
 
-`<installation_path>` is the full path where you cloned this repository.
+    `<installation_path>` is the full path where you cloned this repository.
 
-> Tips : you can change the alias by "ops" for your lazy fingers...
+    > Tips : you can change the alias by "ops" for your lazy fingers...
 
 3. Run `operation briefing`. It may take a little time while it is building all Docker images. To build only one operation you can run `operation briefing <operation_name>`.
 
@@ -46,7 +48,7 @@ alias operation="${OPERATION_FOLDER}/operation.sh"
 
 ## :round_pushpin: Operations list
 
-**Python**
+### Python
 
 `operation pybash` or `operation underground`: access a bash environment with python installed. Current workspace is mapped to `/tmp` folder in container.
 
@@ -54,39 +56,39 @@ alias operation="${OPERATION_FOLDER}/operation.sh"
 
 `operation jupyter` or `operation neptune`: launch a [Jupyter Notebook](https://jupyter.org/).
 
-**RStudio**
+### RStudio
 
 `operation rstudio` or `operation paramount`: launch a [RStudio](https://rstudio.com/) session.
 
-**CSV processing**
+### CSV processing
 
 `operation csv-split <file> <chunk_size>`: allow to split a csv file into many parts.
 
-**DuckDuck Go search**
+### DuckDuck Go search
 
 `operation search <query>` or `operation mirador`: query to DuckDuckGo engine.
 
-**Shutdown (kill)**
+### Shutdown (kill)
 
 `operation shutdown`: clear all operations. WARNING : this will stop/delete all running Docker container too.
 
-**Date processing**
+### Date processing
 
 `operation date` or `operation chronos`: a tiny command line utility to calculate date and time difference. Based on [pdd](https://github.com/jarun/pdd).
 
-**Image processing**
+### Image processing
 
 `operation image` or `operation nightbird`: a command line image resizer and rotator for JPEG and PNG images. Based on [imgp](https://github.com/jarun/imgp).
 
-**MLflow**
+### MLflow
 
 `operation mlflow` or `operation blue_flower`: launch [mlFlow](https://mlflow.org/) user interface from the current folder (must contains an mlruns folder).
 
-**Shellcheck**
+### Shellcheck
 
 `operation shellcheck` or `operation white_paper`: check shell script syntax. Based on (shellcheck)(https://github.com/koalaman/shellcheck).
 
-**Report (list)**
+### Report (list)
 
 `operation report`: list all running operation.
 
