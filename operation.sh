@@ -6,6 +6,32 @@ BUILD=0
 
 cat ${OPERATION_FOLDER}/operation/misc/ui_logo.txt
 
+process_operation()
+{
+    for operation in $*; do
+
+        operation_directory=${OPERATION_FOLDER}/operation/src/${operation}
+        if [ ! -d "${operation_directory}" ]; then
+            echo "operation ${operation} not found!"
+            continue
+        fi
+
+        eval $(parse_yaml ${operation_directory}/config.yml "opconfig_")
+
+        if [ $BUILD = 1 ]; then
+            echo "Building operation $opconfig_name"
+            docker build -f ${operation_directory}/Dockerfile \
+                -t operation_$opconfig_name \
+                ${operation_directory}
+        else
+            echo "Running operation $opconfig_name"
+            echo $opconfig_description
+            $opconfig_command
+            break
+        fi
+    done
+}
+
 # Transform long options to short ones
 for arg in "$@"; do
     shift
@@ -32,25 +58,5 @@ if [ -z "$1" ]; then
     echo "Please pass a command."
 fi
 
-for operation in $*; do
-
-    operation_directory=${OPERATION_FOLDER}/operation/src/${operation}
-    if [ ! -d "${operation_directory}" ]; then
-        echo "operation ${operation} not found!"
-        continue
-    fi
-
-    eval $(parse_yaml ${operation_directory}/config.yml "opconfig_")
-
-    if [ $BUILD = 1 ]; then
-        echo "Building operation $opconfig_name"
-        docker build -f ${operation_directory}/Dockerfile \
-            -t operation_$opconfig_name \
-            ${operation_directory}
-    else
-        echo "Running operation $opconfig_name"
-        echo $opconfig_description
-        $opconfig_command
-    fi
-done
+process_operation $*
 
