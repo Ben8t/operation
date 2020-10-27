@@ -1,5 +1,5 @@
 name: shellcheck
 secret: white_paper
 type: alpha
-command: docker container run --rm -v $(pwd):/tmp -w /tmp operation_shellcheck "${@:2}"
+command: docker container run --rm -v $(pwd):/tmp -w /tmp operation_shellcheck "${@}"
 description: Unknown.
