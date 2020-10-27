@@ -1,6 +1,7 @@
 #!/bin/bash
 
 . ${OPERATION_FOLDER}/operation/helpers/parse_yaml.sh
+cat ${OPERATION_FOLDER}/operation/misc/ui_logo.txt
 
 BUILD=0
 BUILD_ALL=0
@@ -11,7 +12,25 @@ operations=$(find ${OPERATION_FOLDER}/operation/src -type d \
     | cut -d"/" -f1 \
     | rev)
 
-cat ${OPERATION_FOLDER}/operation/misc/ui_logo.txt
+print_help()
+{
+    cat << EOF
+
+usage: operation [OPTION] [OPERATION]...
+
+Options are:
+  -b, --briefing    build option (with OPERATION all, build all)
+  -h, --help        display this help and exit
+Without options, operation will be run.
+
+Operations are:
+EOF
+
+    for operation in ${operations}; do
+        eval $(parse_yaml ${OPERATION_FOLDER}/operation/src/${operation}/config.yml "opconfig_")
+        echo "  -${opconfig_name}: ${opconfig_description}"
+    done
+}
 
 process_operation()
 {
@@ -54,7 +73,7 @@ OPTIND=1
 while getopts "bh" opt
 do
     case "$opt" in
-        "h") cat ${OPERATION_FOLDER}/operation/misc/help.txt; exit 0;;
+        "h") print_help ; exit 0 ;;
         "b") BUILD=1 ;;
         "?") exit 1 ;;
     esac
