@@ -1,5 +1,5 @@
 name: image
 secret: nightbird
 type: alpha
-command: docker container run --rm -it -v $(pwd):/app operation_image "${@}"
+command: docker container run --rm -it -v $(pwd):/app operation_image
 description: Unknown.
