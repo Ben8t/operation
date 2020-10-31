@@ -15,6 +15,12 @@ RUN R -e "install.packages('ggridges',dependencies=TRUE, repos='http://cran.rstu
 RUN R -e "install.packages('magick', dependencies=TRUE, repos='http://cran.rstudio.com/')"
 RUN R -e "install.packages('ggimage', dependencies=TRUE, repos='http://cran.rstudio.com/')"
 RUN R -e "devtools::install_github('ThinkR-open/remedy')"
+RUN R -e "install.packages('odbc',dependencies=TRUE, repos='http://cran.rstudio.com/')"
+RUN R -e "install.packages('RPostgres',dependencies=TRUE, repos='http://cran.rstudio.com/')"
+RUN R -e "install.packages('RPostgreSQL',dependencies=TRUE, repos='http://cran.rstudio.com/')"
+RUN R -e "install.packages('dpblyr',dependencies=TRUE, repos='http://cran.rstudio.com/')"
+RUN R -e "install.packages('aws.signature',dependencies=TRUE, repos='http://cran.rstudio.com/')"
+RUN R -e "install.packages('aws.s3',dependencies=TRUE, repos='http://cran.rstudio.com/')"
 
 RUN cd /usr/share/fonts && git clone https://github.com/Ben8t/fonts.git
 RUN fc-cache -f -v
