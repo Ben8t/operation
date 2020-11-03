@@ -17,3 +17,4 @@ logzero
 pytest
 mock
 PyYAML
+boto3
