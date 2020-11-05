@@ -10,7 +10,7 @@ fi
 
 # HELP
 if [ "$1" = "--help" ]; then
-   cat "Find the full documentation at https://github.com/Ben8t/operation"
+   echo "Find the full documentation at https://ben8t.github.io/operation"
 fi
 
 
