@@ -4,7 +4,7 @@
 <img src="operation/misc/operation.png" width="400" />
 </div>
 
-Find the full documentation on 
+Find the full documentation on https://ben8t.github.io/operation/
 
 ---
 
