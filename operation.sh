@@ -10,7 +10,7 @@ fi
 
 # HELP
 if [ "$1" = "--help" ]; then
-   cat ${OPERATION_FOLDER}/operation/misc/help.txt
+   cat "Find the full documentation at https://github.com/Ben8t/operation"
 fi
 
 
