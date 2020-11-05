@@ -1,3 +1,5 @@
 # Artworks
 
-You can find artworks of this project on [Behance](https://www.behance.net/gallery/95156933/Operation).
+![artwork](assests/images/artwork.png)
+
+[More artworks Behance](https://www.behance.net/gallery/95156933/Operation).
