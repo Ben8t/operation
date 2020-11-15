@@ -1,7 +1,7 @@
 # Welcome to Operation
 
 <div align="center">
-<img src="assests/images/operation.png" width="400" />
+<img src="assets/images/operation.png" width="400" />
 </div>
 
 **Operation** gathers many Docker routines into one place to bring common and simple environments or applications.
