@@ -6,3 +6,4 @@ scikit-learn
 SQLAlchemy
 requests
 knockknock
+plotnine
