@@ -15,3 +15,5 @@ tqdm
 requests
 pandas-profiling
 matplotsoccer
+knockknock
+plotnine

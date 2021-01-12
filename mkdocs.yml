@@ -1,0 +1,11 @@
+site_name: Operation
+theme:
+  name: material
+  custom_dir: overrides
+  logo: assets/images/operation.png
+  favicon: assets/images/operation.png
+  features:
+    - navigation.instant
+extra_css:
+  - stylesheets/extra.css
+    

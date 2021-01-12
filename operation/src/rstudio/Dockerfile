@@ -22,19 +22,27 @@ RUN R -e "install.packages('RPostgreSQL',dependencies=TRUE, repos='http://cran.r
 RUN R -e "install.packages('dpblyr',dependencies=TRUE, repos='http://cran.rstudio.com/')"
 RUN R -e "install.packages('aws.signature',dependencies=TRUE, repos='http://cran.rstudio.com/')"
 RUN R -e "install.packages('aws.s3',dependencies=TRUE, repos='http://cran.rstudio.com/')"
+RUN R -e "install.packages('broom.mixed', repos='http://cran.rstudio.com/')"
+RUN R -e "install.packages('lme4', repos='http://cran.rstudio.com/')"
 
 RUN cd /usr/share/fonts && git clone https://github.com/Ben8t/fonts.git
 RUN fc-cache -f -v
 
-RUN apt-get -yqq install ssh
+RUN apt-get update
+RUN apt-get -yqq --fix-missing install ssh
 # Download public key for github.com
 RUN mkdir -p -m 0600 ~/.ssh && ssh-keyscan github.com >> ~/.ssh/known_hosts
+
+ENV UPDATE="test"
 # Clone private repository
 RUN --mount=type=ssh,id=github_ssh_key git clone git@github.com:olympique-de-marseille/om-theme.git om-theme
 RUN R -e "install.packages('om-theme', repos=NULL, type='source')"
 
 RUN --mount=type=ssh,id=github_ssh_key git clone git@github.com:olympique-de-marseille/ranalytics.git ranalytics
 RUN R -e "install.packages('ranalytics', repos=NULL, type='source')"
+
+RUN --mount=type=ssh,id=github_ssh_key git clone git@github.com:olympique-de-marseille/r-aws-secrets.git aws.secrets
+RUN R -e "install.packages('aws.secrets', repos=NULL, type='source')"
 
 COPY ./user-settings /home/user/.rstudio/monitored/user-settings/user-settings
 

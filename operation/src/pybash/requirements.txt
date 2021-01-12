@@ -18,3 +18,5 @@ pytest
 mock
 PyYAML
 boto3
+knockknock
+plotnine
