@@ -5,6 +5,7 @@ matplotlib
 seaborn
 altair
 jupyter
+jupyterlab
 scikit-learn
 scikit-plot
 xgboost
