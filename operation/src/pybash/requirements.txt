@@ -18,3 +18,4 @@ pytest
 mock
 knockknock
 plotnine
+psycopg2
