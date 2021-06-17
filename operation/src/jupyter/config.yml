@@ -1,5 +1,5 @@
 name: jupyter
 secret: neptune
 type: alpha
-command: docker container run --rm -p 8888:8888 -v $(pwd):/tmp -w /tmp operation_jupyter --notebook-dir=/tmp --ip='*' --port=8888 --no-browser --allow-root
+command: docker container run --rm -p 8888:8888 -v /Users/$USER/.aws/credentials:/root/.aws/credentials -v $(pwd):/tmp -w /tmp operation_jupyter --notebook-dir=/tmp --ip='*' --port=8888 --no-browser --allow-root
 description: Jupyter Notebook. Local data are mapped into the /tmp directory.

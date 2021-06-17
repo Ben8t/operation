@@ -24,6 +24,7 @@ RUN R -e "install.packages('aws.signature',dependencies=TRUE, repos='http://cran
 RUN R -e "install.packages('aws.s3',dependencies=TRUE, repos='http://cran.rstudio.com/')"
 RUN R -e "install.packages('broom.mixed', repos='http://cran.rstudio.com/')"
 RUN R -e "install.packages('lme4', repos='http://cran.rstudio.com/')"
+RUN R -e "install.packages('factoextra', repos='http://cran.rstudio.com/')"
 
 RUN cd /usr/share/fonts && git clone https://github.com/Ben8t/fonts.git
 RUN fc-cache -f -v

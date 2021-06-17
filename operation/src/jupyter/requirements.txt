@@ -18,3 +18,4 @@ pandas-profiling
 matplotsoccer
 knockknock
 plotnine
+boto3==1.14.0
