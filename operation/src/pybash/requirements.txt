@@ -20,3 +20,4 @@ PyYAML
 boto3
 knockknock
 plotnine
+psycopg2
