@@ -1,4 +1,4 @@
-FROM rocker/tidyverse
+FROM rocker/geospatial
 
 RUN mkdir -p /home/user/.rstudio/monitored/user-settings/
 
@@ -22,6 +22,13 @@ RUN R -e "install.packages('dpblyr',dependencies=TRUE, repos='http://cran.rstudi
 RUN R -e "install.packages('aws.signature',dependencies=TRUE, repos='http://cran.rstudio.com/')"
 RUN R -e "install.packages('aws.s3',dependencies=TRUE, repos='http://cran.rstudio.com/')"
 RUN R -e "install.packages('ggx',dependencies=TRUE, repos='http://cran.rstudio.com/')"
+RUN R -e "install.packages('ggdist', dependencies=TRUE, repos='http://cran.rstudio.com/')"
+
+# RUN R -e "install.packages('sf', dependencies=TRUE, repos='http://cran.rstudio.com/')"
+RUN R -e "install.packages('osmdata', dependencies=TRUE, repos='http://cran.rstudio.com/')"
+RUN R -e "install.packages('raster', dependencies=TRUE, repos='http://cran.rstudio.com/')"
+RUN R -e "install.packages('lwgeom', dependencies=TRUE, repos='http://cran.rstudio.com/')"
+
 
 RUN cd /usr/share/fonts && git clone https://github.com/Ben8t/fonts.git
 RUN fc-cache -f -v
